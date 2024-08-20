@@ -6,7 +6,9 @@ import time
 # Function to scrape issue links and save to a list
 def scrape_issue_links():
     print("All links scrape")
-    url = "https://www.cambridge.org/core/journals/british-journal-of-political-science/all-issues"
+    #url format - https://www.cambridge.org/core/journals/example-journal/all-issues 
+    #
+    url = "https://www.cambridge.org/core/journals/british-journal-of-political-science/all-issues" #change this to a valid link for a different journal from cambridge website
     response = requests.get(url)
 
     if response.status_code == 200:
@@ -19,7 +21,7 @@ def scrape_issue_links():
             if '/core/journals/british-journal-of-political-science/issue' in href:
                 try:
                     year = int(text.split()[2][:4])
-                    if year >= 2014:
+                    if year >= 2014: #change this expression for a different time span
                         full_link = f"https://www.cambridge.org{href}"
                         issue_links.append(full_link)
                         print(text)
@@ -110,7 +112,7 @@ def scrape_all_articles():
         title, date, keywords = scrape_article_details(article)
         if title:
             article_details.append({
-                'Journal': 'British Journal of Political Science',
+                'Journal': 'British Journal of Political Science', #change this if used for a different journal
                 'Date': date,
                 'Year': date.split()[-1] if date != 'No date found' else 'Unknown',
                 'Title': title,
