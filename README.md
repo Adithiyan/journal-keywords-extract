@@ -1,14 +1,12 @@
-# journal-keywords-extract
-
-
 # Journal Keywords Scraper
 
-This Python script scrapes article details from Journals published by Cambridge University Press. It extracts information such as article titles, publication dates, and keywords from all issues, and saves the data in an Excel file.
+This Python script scrapes article Keywords, authors from Journals published by Cambridge University Press. It extracts information such as article titles, publication dates, and keywords from all issues, and saves the data in an Excel file.
 
 ## Usage
 - Clone or download the repository to your local machine.
 - Navigate to the script directory in your terminal.
 - Run the script using Python:
+
   ```bash
   python keyword_extract.py
 
