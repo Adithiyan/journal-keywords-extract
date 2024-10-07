@@ -3,10 +3,6 @@
 This Python script scrapes article Keywords, authors from Journals published by Cambridge University Press. It extracts information such as article titles, publication dates, and keywords from all issues, and saves the data in an Excel file.
 
 
-## Output
-
-![image](https://github.com/user-attachments/assets/a38a0731-12ac-412c-8486-b2e672e66c30)
-
 
 ## Usage
 - Clone or download the repository to your local machine.
